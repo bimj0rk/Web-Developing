@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ex1</title>
+    </head>
+
+    <body>
+        <script>
+            function sum(n){
+                let sum = 0;
+                n--;
+                for(n; n > 0; n--){
+                    if(n % 2 === 0){
+                        sum += n;
+                    }
+                }
+
+                return sum;
+            }
+
+            console.log(sum(20));
+        </script>
+    </body>
+</html>

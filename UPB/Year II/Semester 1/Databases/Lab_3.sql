@@ -1,0 +1,10 @@
+SELECT last_name || ' earns ' || TO_CHAR(salary, 'fm$99,999') || ' monthly but wants ' || TO_CHAR(salary * 3, 'fm$99,999') || '.' "Dream Salaries" FROM employees;
+SELECT last_name, NVL(TO_CHAR(commission_pct), 'No Commission') COMM FROM employees;
+SELECT job_id, COUNT(job_id) COUNTER FROM employees GROUP BY job_id;
+SELECT MAX(salary) "HIGHEST SALARY", MIN(salary) "MINIMUM SALARY", MAX(salary) - MIN(salary) "DIFFERENCE" FROM employees;
+SELECT last_name, department_id, department_name FROM employees JOIN departments USING (department_id);
+SELECT e.last_name "EMPLOYEE", e.employee_id "EMP#", m.last_name "MANAGER", m.manager_id "MGR#" FROM employees e JOIN employees m ON(e.manager_id = m.employee_id);
+SELECT e.last_name "EMPLOYEE", e.employee_id "EMP#", m.last_name "MANAGER", m.manager_id "MGR#" FROM employees e LEFT OUTER JOIN employees m ON(e.manager_id = m.employee_id);
+SELECT last_name, employee_id FROM employees WHERE last_name LIKE '%u%';
+SELECT e.last_name, e.department_id, e.job_id FROM employees e JOIN departments d ON(e.department_id = d.department_id) WHERE location_id LIKE '1700';
+SELECT e.last_name, e.department_id, e.job_id FROM employees e JOIN departments d ON(e.department_id = d.department_id) WHERE department_name LIKE 'Executive';

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Ex5</title>
+    </head>
+
+    <body>
+        <p id = "text"></p>
+
+        <script>
+            let str;
+            
+            function display(str, id){
+                let length = str.length;
+                let part1 = str.substr(0, length/2);
+                id.innerHTML = part1;
+            }
+            
+            let id = document.getElementById('text');
+            display("test", id);
+        </script>
+    </body>
+</html>

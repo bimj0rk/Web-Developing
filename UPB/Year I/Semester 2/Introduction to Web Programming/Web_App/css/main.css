@@ -1,0 +1,273 @@
+@keyframes a-flip-top {
+  0% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        background-color: #e7e7e7;
+        color:black;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        background-color: #e7e7e7;
+        color:black;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        background-color: #e7e7e7;
+        color:black;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        background-color: #e7e7e7;
+        color:black;
+    }
+}
+
+.navbar {
+  animation-name: a-flip-top;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  background-color: #8590AA;
+  position: fixed;
+  overflow: hidden;
+  top:0%;
+  width: 100%;
+}
+
+.navbar .col-md-12{
+  text-align: left;
+  float: left;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.button {
+  text-align: center;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  background-color: #e7e7e7; color: black;
+  font-size: 20px; 
+  padding: 8px 20px;
+  border-radius: 12px;
+  border-style: none;
+  width: 13rem;
+  text-decoration: none;
+}
+
+button:hover{
+  color: #e7e7e7; 
+  background-color: black;
+}
+
+.button:hover{
+  color: #e7e7e7; 
+  background-color: black;
+}
+
+.navbar a:hover{
+  display: block;
+  -webkit-animation: fadeInFromNone 0.8s ease-out;
+  -moz-animation: fadeInFromNone 0.8s ease-out;
+  -o-animation: fadeInFromNone 0.8s ease-out;
+  animation: fadeInFromNone 0.8s ease-out;
+  animation-fill-mode: forwards;
+  text-decoration: none;
+}
+
+.icon{
+  animation-name: a-flip-top;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+}
+
+.title{
+  border-style: solid;
+  height: 500px;
+  padding: 15px;
+  width: 350px;
+}
+
+.title img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row{
+  padding: 7px;
+}
+
+.text{
+  animation-name: a-flip-top;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  font-size: large;
+}
+
+.tabel table,th,td{
+  font-size: medium;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+.end-form-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  max-width: 30rem;
+  font-family: "Times New Roman", Times, serif  ;
+}
+
+input::placeholder{
+  color: #a3a1a1;
+}
+
+#username{
+  margin-bottom: 3rem;
+  width: 100%;
+  outline: none;
+}
+
+#end-text{
+  font-size: 2.4rem;
+  color: azure;
+  text-align: center;
+}
+
+#saveScoreBtn{
+  border: none;
+}
+
+.fa-home{
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: black;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center{
+  justify-content: center;
+  text-align: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.submitValues{
+  text-align: center;
+}
+
+select {
+  margin: 50px;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border-radius: 1rem;
+  border: 1px solid #CCC;
+  height: 34px;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none; 
+}
+
+.button {
+  background-image: linear-gradient(to right, #878ef1 0%, #413766  51%, #878ef1  100%);
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: auto;
+  width: auto;
+}
+
+.button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}

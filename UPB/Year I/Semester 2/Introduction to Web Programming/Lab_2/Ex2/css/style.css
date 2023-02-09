@@ -1,0 +1,152 @@
+body {
+	background-color: #eee;
+	font-family:"Trebuchet MS";
+	margin: 0; 
+	padding: 0;
+}
+
+.title {
+	float:left;
+	color: white;
+	background-color: #b31217;
+	overflow: hidden;
+	margin-left: 20px;
+}
+
+nav {
+    background-color: #b31217;
+    overflow: hidden;
+}
+
+.navigation {
+	background-color: #ffffff;
+	position: relative;
+	text-align: center;
+}
+
+.navigation ul {
+	list-style: none;
+	padding: 0;
+	float: right;
+}
+
+.navigation ul li {
+	display: inline-block;
+	padding: 10px 0;
+}
+
+.navigation ul li a {
+	color: #ddd;
+	text-decoration: none;
+	padding: 10px;
+	font-size: 14px;
+}
+
+.navigation ul li a:hover {
+	background-color: white;
+	color: #b31217;
+	padding: 30px 10px;
+}
+
+.link {
+	transition: 0.5s;
+	margin-right: 10px;
+} 
+
+.content {
+	padding: 2%;
+	width: 72%;
+	float: left;
+	color: #30395C;
+}
+
+.left {
+	padding: 2%;
+	width: 20%;
+	float: left;
+	color: #30395C;
+}
+
+select,
+input[type="text"],
+input[type="password"],
+input[type="mobile"],
+input[type="email"] {
+	border: none;
+    border-bottom: 1px solid #CFCFCF;
+	outline: 0;
+	background-color: #eee;
+	padding: 10px;
+	font-size: 18px;
+	width: 300px;
+	margin-bottom: 16px;
+}
+
+textarea {
+	height: 30px;
+	background-color: #eee;
+	width: 310px;
+}
+
+input[id="fname"],
+input[id="lname"] {
+	width: 138px;
+}
+
+label {
+	display: block;
+}
+
+select {
+	width: 103.5px;
+}
+input[type="submit"] {
+	background-color: #b31217;
+	border: none;
+	color: white;
+	padding: 8px 30px;
+}
+
+input[type="submit"]:hover {
+	background: #800080;
+	color: white;
+	transition: 0.5s;
+}
+
+.bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background-color: #404040;
+  color: white;
+  text-align: center;
+}
+
+.content h1 {
+	color: #b31217;
+}
+
+img {
+	width: 200px;
+}
+
+.gallery ul {
+	list-style: none;
+	padding: 0;
+}
+
+.gallery ul li {
+	display: inline-block;
+}
+
+.gallery  img {
+	height: 200px;
+	border-radius: 10px;
+}
+
+.gallery  p,
+.gallery  figcaption {
+	text-align: center;
+}

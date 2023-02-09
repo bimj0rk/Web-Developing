@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<input type="text" id="color" placeholder="Enter colors as #zzzzzz">
+	<button id="btn">Change Color</button>
+
+	<script>
+		let btn = document.getElementById('btn');
+		let color = document.getElementById('color');
+		let body = document.getElementsByTagName('body');
+
+		function changeColor(){
+			body[0].style.backgroundColor = color.value;
+		}
+
+		btn.addEventListener('click', changeColor);
+	</script>
+
+</body>
+</html>

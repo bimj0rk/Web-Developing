@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ex9</title>
+    </head>
+
+    <body>
+        <script>
+            let arr = [3, 5, 1, 4, 2];
+
+            function change(arr){
+                for(let i = 0; i < 5; i++){
+                    if(arr[i] % 2 === 0)
+                        arr[i] = 0;
+                    else arr[i] = 1;
+                }
+
+                return arr;
+            }
+
+            change(arr);
+
+            console.log(arr);
+        </script>
+    </body>
+</html>

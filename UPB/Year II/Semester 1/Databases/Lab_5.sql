@@ -1,0 +1,3 @@
+SELECT last_name, department_id, salary FROM employees WHERE (salary, department_id) IN (SELECT salary, department_id FROM employees WHERE commission_pct IS NOT NULL);
+SELECT last_name, hire_date, salary FROM employees WHERE (salary, manager_id) IN (SELECT salary, manager_id FROM employees WHERE last_name LIKE 'Kochhar');
+SELECT employee_id, last_name, department_id FROM employees WHERE department_id IN (SELECT department_id FROM departments WHERE location_id IN (SELECT location_id FROM locations WHERE city LIKE 'T%'));

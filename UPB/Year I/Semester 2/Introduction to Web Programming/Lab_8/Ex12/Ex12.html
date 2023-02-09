@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8">
+		<title>Ex12</title>
+	</head>
+
+	<body>
+		
+		<div id = "box"></div>
+
+		<script>
+			let box = document.getElementById('box');
+			function drawBox() {
+				box.style.width = '200px';
+				box.style.height = '200px';
+				box.style.backgroundColor = 'red';
+			}
+			drawBox();
+
+			function changeSize(){
+				let boxWidth = parseInt(box.style.width);
+				let boxHeight = parseInt(box.style.height);
+				box.style.width = boxWidth/2 + 'px';
+				box.style.height = boxHeight/2 + 'px';
+			}
+
+			box.addEventListener('click', changeSize);
+		</script>
+	</body>
+</html>

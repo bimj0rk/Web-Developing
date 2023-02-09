@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ex11</title>
+    </head>
+
+    <body>
+        <script>
+            let arr = [3, 5, 1, 4, 2];
+            
+            function sortAndAdd(arr){
+                for(let i = 0; i < 5; i++){
+                    for(let j = 0; j < 5; j++){
+                        if(arr[j] > arr[i]){
+                            let temp = arr[j];
+                            arr[j] = arr[j+1];
+                            arr[j+1] = temp;
+                        }
+                    }
+                }
+                
+                let a = arr.length/2;
+                arr[a] = arr[a-1];
+                return arr;
+            }
+
+            sortAndAdd(arr);
+
+            console.log(arr);
+        </script>
+    </body>
+</html>
