@@ -2,8 +2,7 @@
 <html>
     <head>
         <title>Site - Registration</title>
-        <link rel="stylesheet" href="css/index.css">  
-        <script type="text/javascript" src="js/index.js" defer></script>     
+        <link rel="stylesheet" href="css/index.css">    
     </head>
     <body>
         <div id = logo>
@@ -14,12 +13,11 @@
         <div id = "links">
             <a href="home.html">Home</a>
             <a href="index.html">Register</a>
-            <a href="contact">Contact</a>
+            <a href="contact.html">Contact</a>
         </div>
 
-        <div id = registration>
-            <form id="registration">  
-                <h4>Registration form for losers</h4>     
+            <form name="registration" onsubmit="return CheckIfGood()">  
+                <h4>Registration form</h4>     
                 <div>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name">
@@ -53,9 +51,6 @@
             
                         <input type="radio" id="female" name="female" value="female">
                         <label for="female">Female</label>
-
-                        <input type="radio" id="other" name="other" value="other">
-                        <laber for="other">Other</laber>
                     </form>
                 </div>
 
@@ -80,10 +75,10 @@
                 </div>
 
                 <div>
-                    <input type="submit" value="Submit" id="submit">
-                    <input type="submit" value="Reset">
+                    <input type="submit" value="Submit" name="submit">
+                    <input type="reset" value="Reset" name="reset">
                 </div>
             </form>
-        </div> 
+        <script type="text/javascript" src="js/index.js" defer></script> 
     </body>
 </html>
