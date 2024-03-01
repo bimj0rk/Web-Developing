@@ -5,49 +5,34 @@ function CheckIfGood(){
     const confirm = document.getElementById("confirm").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const phoneRegex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
 
     if(name === ""){
         alert("Name musn't be empty!");
         return false;
-    }
-
-    if(user === ""){
+    }else if(user === ""){
         alert("Username musn't be empty!");
         return false;
-    }
-
-    if(password === ""){
+    }else if(password === ""){
         alert("Password musn't be empty!");
         return false;
-    }
-
-    if(confirm === ""){
+    }else if(confirm === ""){
         alert("Confirm password musn't be empty!");
         return false;
-    }
-
-    if(password !== confirm){
+    }else if(password !== confirm){
         alert("Passwords MUST match.");
         return false;
-    }
-
-    if(email === ""){
+    }else if(email === ""){
         alert("Email musn't be empty!");
         return false;
-    }
-
-    if(phone === ""){
+    }else if(phone === ""){
         alert("Phone no. musn't be empty!");
         return false
-    }
-    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    if(emailRegex.test(email.value)){
+    }else if(emailRegex.test(email.value)){
         alert("Email is not an email.");
         return false;
-    }
-
-    const phoneRegex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
-    if(phoneRegex.test(phone.value)){
+    }else if(phoneRegex.test(phone.value)){
         alert("Phone number does not seem to be in a phone number shape.");
         return false;
     }
