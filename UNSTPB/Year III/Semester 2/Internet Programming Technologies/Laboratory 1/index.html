@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Site - Registration</title>
+        <link rel="stylesheet" href="css/index.css">    
+    </head>
+    <body>
+        <div id = logo>
+            <img src="images/logo.jpg"><br>
+            <h1 id = header>COMPANY NAME</h1>
+        </div>
+
+        <div id = "links">
+            <a href="home.html">Home</a>
+            <a href="index.html">Register</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <form name="registration">  
+            <h4>Registration form</h4>     
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+        
+            <div>
+                <label for="user">Username:</label>
+                <input type="text" id="user" name="user">
+            </div>
+            
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            
+            <div>
+                <label for="confirm">Repeat Password:</label>
+                <input type="password" id="confirm" name="confirm">
+            </div>
+            
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+            </div>
+                
+            <div>
+                <p>Gender:</p>
+                <form name="gender" id="gender">
+                    <input type="radio" id="male" name="male" value="male">
+                    <label for="male">Male</label>
+            
+                    <input type="radio" id="female" name="female" value="female">
+                    <label for="female">Female</label>
+                </form>
+            </div>
+
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+
+            <div>
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="romania">Romania</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="newsletter">Subscribe to newsletter?</label>
+                <input type="checkbox" id="newsletter" name="newsletter">
+            </div>
+
+            <div>
+                <button type="submit" value="Submit" name="submit" onclick="return CheckIfGood()">Submit</button>
+                <button type="reset" value="Reset" name="reset">Reset</button>
+            </div>
+        </form>
+
+        <script type="text/javascript" src="js/check.js" defer></script> 
+    </body>
+</html>
