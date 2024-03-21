@@ -1,0 +1,8 @@
+.title {
+    min-height: 200px;
+    padding: auto;
+}
+
+.title table tr td th{
+    height: auto;
+}

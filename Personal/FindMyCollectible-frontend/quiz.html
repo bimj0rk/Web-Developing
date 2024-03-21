@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <link rel = "stylesheet" href = "css/main.css">
+        <link rel = "stylesheet" href = "bootstrap-3.4.1-dist\css\bootstrap.css">
+        <link rel = "stylesheet"  href = "bootstrap-3.4.1-dist\css\bootstrap.min.css">
+        <link rel = "stylesheet"  href = "css/quiz.css">
+        <link rel = "shortcut icon" href = "img/heartrate.ico">
+        <title>Health300 - Health Quiz</title>
+        <meta charset = "8">
+    </head>
+    <body>
+        <div class = "navbar">
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-md-12">
+                        <a href = "index.html">Home </a>
+                        <a href = "quiz.html">Quiz </a>
+                        <a href = "preDashboard.html">Dashboard </a>
+                        <a href = "calculator.html">Calculator</a>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class = "cntainer icon">
+            <div id = "quiz" class = "justify-center flex-column">
+                <div id = "hud">
+                    <div class = "hud-item">
+                        <p id = "progressText" class="hud-prefix">Question</p>
+                        <div id = "progressBar">
+                            <div id = "progressBarFull"></div>
+                        </div>
+                        <h1 class = "hud-main-text" id = "score">0</h1>
+                    </div>
+                </div>
+                <h1 id = "question">Question</h1>
+                <div class = "choice-container">
+                    <p class = "choice-prefix">A</p>
+                    <p class = "choice-text" data-number="1">Choice</p>
+                </div>
+                <div class = "choice-container">
+                    <p class = "choice-prefix">B</p>
+                    <p class = "choice-text" data-number="2">Choice2</p>
+                </div>
+                <div class = "choice-container">
+                    <p class = "choice-prefix">C</p>
+                    <p class = "choice-text" data-number="3">Choice3</p>
+                </div>
+                <div class = "choice-container">
+                    <p class = "choice-prefix">D</p>
+                    <p class = "choice-text" data-number="4">Choice4</p>
+                </div>
+            </div>
+        </div>
+        <script src = "js/quiz.js"></script>
+    </body>
+</html>
