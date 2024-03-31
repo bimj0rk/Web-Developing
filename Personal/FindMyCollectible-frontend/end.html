@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel = "stylesheet" href = "css/main.css">
+        <link rel = "stylesheet" href = "bootstrap-3.4.1-dist\css\bootstrap.css">
+        <link rel = "stylesheet"  href = "bootstrap-3.4.1-dist\css\bootstrap.min.css">
+        <link rel = "stylesheet"  href = "css/quiz.css">
+        <link rel = "shortcut icon" href = "img/heartrate.ico">
+        <title>Health300 - Health Quiz</title>
+        <meta charset = "8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Health300 - Health Quiz</title>
+        
+    </head>
+    <body>
+        <div class = "navbar">
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-md-12">
+                        <a href = "index.html">Home </a>
+                        <a href = "quiz.html">Quiz </a>
+                        <a href = "preDashboard.html">Dashboard </a>
+                        <a href = "calculator.html">Calculator</a>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class = "cntainer icon">
+            <div id = "end" class="flex-center flex-column">
+            <h1 id = "finalScore"></h1>
+            <form class = "end-form-container">
+                    <h2 id = "end-text">Enter your name to save your score</h2>
+                    <input type = "text" name="name" id="username" placeholder = "Enter your name">
+                    <button class = "button" id = "saveScoreBtn" type = "submit" onclick = "saveHighScore(event)" disabled>Save</button>
+                    <a href = "index.html" class="button">Go home<i class = "fas fa-home"></i></i></a>             
+                </form>
+            </div>
+        </div>
+        <script src = "js/end.js"></script>
+    </body>
+</html>
