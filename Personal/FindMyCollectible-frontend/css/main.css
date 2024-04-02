@@ -153,6 +153,11 @@ button:hover{
   margin-top: 30px;
 }
 
+.menuimg{
+  height: auto;
+  width: 240px;
+}
+
 .title{
   border-style: solid;
   height: 400px;
