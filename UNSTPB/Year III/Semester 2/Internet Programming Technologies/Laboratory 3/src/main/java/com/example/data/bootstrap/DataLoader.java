@@ -1,40 +1,52 @@
 package com.example.data.bootstrap;
 
-import com.example.data.domain.Address;
-import com.example.data.domain.Card;
-import com.example.data.domain.Faculty;
-import com.example.data.domain.Student;
-import com.example.data.repositories.FacultyRepository;
-import com.example.data.services.FacultyService;
-import com.example.data.services.StudentService;
-import org.springframework.beans.factory.annotation.Qualifier;
+import com.example.data.domain.*;
+import com.example.data.repositories.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
-    private final StudentService studentService;
-    private final FacultyService facultyService;
 
-    public DataLoader(StudentService studentService, @Qualifier("facultyServiceEm") FacultyService facultyService, FacultyRepository facultyRepository) {
-        this.studentService = studentService;
-        this.facultyService = facultyService;
+    private final PatientRepository patientRepository;
+    private final MedicalEncounterRepository medicalEncounterRepository;
+    private final HealthIssueRepository healthIssueRepository;
+    private final CareProviderRepository careProviderRepository;
+    private final HealthServiceRepository healthServiceRepository;
+
+    public DataLoader(PatientRepository patientRepository, MedicalEncounterRepository medicalEncounterRepository, HealthIssueRepository healthIssueRepository,  CareProviderRepository careProviderRepository,  HealthServiceRepository healthServiceRepository) {
+        this.patientRepository = patientRepository;
+        this.medicalEncounterRepository = medicalEncounterRepository;
+        this.healthIssueRepository = healthIssueRepository;
+        this.careProviderRepository = careProviderRepository;
+        this.healthServiceRepository = healthServiceRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
-        Address a1 = new Address("Bucharest");
-        Student s1= new Student("John",a1);
-        Card c1=new Card("123");
-        Card c2=new Card("234");
-        s1.addCard(c1);
-        s1.addCard(c2);
-        Faculty fils = new Faculty("FILS");
-        fils.addStudent(s1);
-        facultyService.save(fils);
-        List<Faculty> faculties = facultyService.findFacultiesByName("FILS");
-        faculties.forEach(System.out::println);
+        Patient patient1 = new Patient("Joe Xi Na");
+        patientRepository.save(patient1);
+
+        CareProvider careProvider1 = new CareProvider("Baba Yaga", "Orthopedy");
+        careProviderRepository.save(careProvider1);
+
+        HealthIssue healthIssue1 = new HealthIssue("Broken Achilles Heel", patient1);
+        healthIssueRepository.save(healthIssue1);
+
+        MedicalEncounter encounter1 = new MedicalEncounter(LocalDate.now(), patient1, careProvider1);
+        medicalEncounterRepository.save(encounter1);
+
+        HealthService service1 = new HealthService("Physical Exam", "Exam", encounter1);
+        healthServiceRepository.save(service1);
+
+        patient1.addHealthIssue(healthIssue1);
+        patient1.addMedicalEncounter(encounter1);
+        careProvider1.addMedicalEncounter(encounter1);
+        encounter1.addHealthService(service1);
+
+        patientRepository.save(patient1);
+        careProviderRepository.save(careProvider1);
+        medicalEncounterRepository.save(encounter1);
     }
 }

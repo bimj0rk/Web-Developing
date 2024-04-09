@@ -1,28 +1,52 @@
 package com.example.data.domain;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
-@Data
-@NoArgsConstructor
 public class HealthIssue {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String type;
 
     @ManyToOne
+    @JoinColumn(name = "patient_id")
     private Patient patient;
 
-    @OneToMany(mappedBy = "health_issue", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    private Set<HealthService> healthServices = new HashSet<>();
+    // Constructors
+    public HealthIssue() {}
 
-    public HealthIssue(String type) {
+    public HealthIssue(String type, Patient patient) {
+        this.type = type;
+        this.patient = patient;
+    }
+
+    // Getters and setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
         this.type = type;
     }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+        if (patient != null && !patient.getHealthIssues().contains(this)) {
+            patient.getHealthIssues().add(this);
+        }
+    }
+
 }
