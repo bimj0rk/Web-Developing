@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FirstMvcApplication<FirstMVC>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.wad.firstmvc.FirstMvcApplication",
+            "projectName": "FirstMVC",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
