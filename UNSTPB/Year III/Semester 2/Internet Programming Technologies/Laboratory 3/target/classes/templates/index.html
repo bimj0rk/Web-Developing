@@ -8,9 +8,9 @@
 <nav>
     <ul>
         <li><a th:href="@{/healthData/patient/{id}/healthIssues(id=1)}">Health Issues for Patient 1</a></li>
-        <li><a th:href="@{/healthData/encounters/date/{date}(date='2024-01-01')}">Patients with Encounters on 2024-01-01</a></li>
-        <li><a th:href="@{/healthData/careProvider/{name}/patients(name='Dr. Smith')}">Patients of Dr. Smith</a></li>
-        <li><a th:href="@{/healthData/healthIssue/{type}/careProviders(type='Diabetes')}">Care Providers for Diabetes</a></li>
+        <li><a th:href="@{/healthData/encounters/date/{date}(date='2024-01-01')}">Patients with Encounters on a given date</a></li>
+        <li><a th:href="@{/healthData/careProvider/{name}/patients(name='Dr. Smith')}">Patients of Care Provider 1</a></li>
+        <li><a th:href="@{/healthData/healthIssue/{type}/careProviders(type='Diabetes')}">Care Providers for Achilles Heel issues</a></li>
     </ul>
 </nav>
 </body>
