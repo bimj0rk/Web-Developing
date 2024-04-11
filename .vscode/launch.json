@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FindmyApplication<findmy>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.adiicmp.findmy.FindmyApplication",
+            "projectName": "findmy",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
