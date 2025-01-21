@@ -1,0 +1,1 @@
+{"hosting":{"public":"build/web","ignore":["firebase.json","**/.*","**/node_modules/**"],"rewrites":[{"source":"**","destination":"/index.html"}]},"flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"projectsofteng-df561","configurations":{"web":"1:848925959606:web:b531f6a189237337430d17"}}}}}}
